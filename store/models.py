@@ -63,15 +63,6 @@ class Customer(models.Model):
     birth_date = models.DateField(null=True)
     membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default=BRONZE_MEMBER)
 
-    # Metadata
-    class Meta:
-        # Table name we want to give
-        db_table = 'store_customers'
-        # To define SQL indexes
-        indexes = [
-            models.Index(fields=['last_name','first_name'])
-        ]
-
 
 class Order(models.Model):
     PENDING = "P"
