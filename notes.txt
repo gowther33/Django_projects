@@ -27,3 +27,7 @@ To change the schema of your db we add metadata to our models
 2. Undoing complete migration: Use command
 > migrate <app_name> <desired_migration_sequence_no>
 E.g: py manage.py migrate store 0003
+
+
+* Git:
+> To go to 1 step behind the last commit: git reset --hard HEAD~1
