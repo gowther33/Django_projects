@@ -77,7 +77,7 @@ class Order(models.Model):
 
     # auto_now_add tells django to populate the table when the first time we create an instance of this class
     placed_at = models.DateTimeField(auto_now_add=True)
-    payment_statud = models.CharField(max_length=1, choices=PAYMENT_CHOICES, default=PENDING)
+    payment_status = models.CharField(max_length=1, choices=PAYMENT_CHOICES, default=PENDING)
     customer = models.ForeignKey(Customer, on_delete=models.PROTECT)
 
 
